@@ -1,0 +1,18 @@
+{
+  "name": "baseapp",
+  "version": "1.0.0",
+  "description": "Base Application to start a new project",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon --experimental-modules src/index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
