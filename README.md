@@ -9,10 +9,10 @@ Base application to begin a new project in Node.js with basic extensions :
 
 * [X] ES6 : mainly to use import instruction using *.mjs files
 * [X] Nodemon
-* [ ] Github
-* [ ] Express with :
-  * [ ] Routes
-  * [ ] Separate APP (UI) and API
+* [X] Github
+* [X] Express with :
+  * [X] Routes
+  * [X] Separate APP (UI) and API
 * [ ] Bootstrap
 * [ ] Unit Tests
 * [ ] Authentication
