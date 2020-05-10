@@ -8,8 +8,10 @@
     "url": "https://github.com/benoit-development/Node-BaseApp.git"
   },
   "scripts": {
-    "start": "nodemon --experimental-modules src/index.mjs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "test": "mocha",
+    "start-dev": "nodemon --inspect src/index.js",
+    "test-dev": "mocha --watch --inspect"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +19,8 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.3"
+    "mocha": "^7.1.2",
+    "nodemon": "^2.0.3",
+    "supertest": "^4.0.2"
   }
 }

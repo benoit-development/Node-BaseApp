@@ -13,7 +13,7 @@ Base application to begin a new project in Node.js with basic extensions :
 * Express Backend
   * [X] Routes
   * [X] Separate APP (UI) and API
-  * [ ] Unit tests
+  * [X] Unit tests (Mocha)
   * [ ] MongoDB integration
 * Vue.js Frontend
   * [ ] Vue.js Structure
