@@ -10,16 +10,18 @@ Base application to begin a new project in Node.js with basic extensions :
 * [X] ES6 : mainly to use import instruction using *.mjs files
 * [X] Nodemon
 * [X] Github
-* [X] Express with :
+* Express Backend
   * [X] Routes
   * [X] Separate APP (UI) and API
-* [ ] Vue.js
-* [ ] Bootstrap
-* [ ] Font awesome
-* [ ] Unit Tests
+  * [ ] Unit tests
+  * [ ] MongoDB integration
+* Vue.js Frontend
+  * [ ] Vue.js Structure
+  * [ ] Bootstrap
+  * [ ] Font awesome
+  * [ ] Unit Tests
+* Both part
 * [ ] Authentication
 * [ ] Dockerization of the project
-* [ ] MongoDB integration
 * [ ] CRUD with Mongo DB
-* [ ] Docker
-* [ ] CI/CD somewhere
+* [ ] CI/CD GitHub
