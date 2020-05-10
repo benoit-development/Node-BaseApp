@@ -1,10 +1,11 @@
 import express from 'express';
-import appRoutes from './routes/appRoutes.mjs';
-import apiRoutes from './routes/apiRoutes.mjs';
+import routes from './routes.mjs';
 
 const app = express()
-app.use('/api', apiRoutes);
-app.use('/app', appRoutes);
+app.use('/', routes);
+app.use(function(req, res) {
+  res.status(404).send({url: req.originalUrl + ' not found'})
+});
 
 const port = 3000;
 app.listen(port, function () {
