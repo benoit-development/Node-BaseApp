@@ -14,7 +14,7 @@ Base application to begin a new project in Node.js with basic extensions :
   * [X] Routes
   * [X] Separate APP (UI) and API
   * [X] Unit tests (Mocha)
-  * [ ] EsLint
+  * [X] EsLint
   * [ ] MongoDB integration
 * Vue.js Frontend
   * [ ] Vue.js Structure

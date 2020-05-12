@@ -11,7 +11,8 @@
     "start": "node src/index.js",
     "test": "./node_modules/mocha/bin/mocha",
     "start-dev": "nodemon --inspect src/index.js",
-    "test-dev": "mocha --watch --inspect"
+    "test-dev": "mocha --watch --inspect",
+    "lint": "eslint ."
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +20,7 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "eslint": "^7.0.0",
     "mocha": "^7.1.2",
     "nodemon": "^2.0.3",
     "supertest": "^4.0.2"
