@@ -16,5 +16,7 @@ jobs:
         run: ls -R
         working-directory: ${{ env.api-directory }}
       - name: Test API
-        run: npm test
+        run: |
+          npm install
+          npm test
         working-directory: ${{ env.api-directory }}
