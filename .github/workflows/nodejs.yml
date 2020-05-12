@@ -3,8 +3,6 @@ name: Greet Everyone
 on: [push]
 
 jobs:
-  env:
-    api_folder: ./api
 
   build:
     # Job name is Greeting
@@ -14,4 +12,5 @@ jobs:
     steps:
       # This step prints an output (time) from the previous step's action.
       - name: Echo api folder
-        run: echo 'API folder is : ${{ api_folder }}.'
+        run: echo 'pouet'
+        working-directory: api
