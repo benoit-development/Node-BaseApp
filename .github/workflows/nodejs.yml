@@ -21,15 +21,10 @@ jobs:
           npm test
           npm run lint
         working-directory: ${{ env.api-directory }}
-
-    name: Build APP Frontend
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
       - name: APP folder listing
         run: ls -R
         working-directory: ${{ env.app-directory }}
-      - name: Test API
+      - name: Test APP
         run: |
           npm install
           npm test
