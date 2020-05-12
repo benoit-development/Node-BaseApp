@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node src/index.js",
-    "test": "./node_modules/mocha/bin/mocha",
+    "test": "mocha",
     "start-dev": "nodemon --inspect src/index.js",
     "test-dev": "mocha --watch --inspect",
     "lint": "eslint ."
