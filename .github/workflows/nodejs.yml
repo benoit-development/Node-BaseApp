@@ -5,11 +5,10 @@ on: [push]
 jobs:
 
   build:
-    # Job name is Greeting
     name: Build App
-    # This job runs on Linux
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - name: Echo api folder
-        run: echo 'pouet'
+        run: ln -s
+        working-directory: api
