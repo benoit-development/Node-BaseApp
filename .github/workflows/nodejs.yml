@@ -11,3 +11,4 @@ jobs:
       - uses: actions/checkout@v1
       - name: Echo api folder
         run: ls -R
+        working-directory: ./api
