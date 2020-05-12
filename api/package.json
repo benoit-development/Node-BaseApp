@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node src/index.js",
-    "test": "mocha",
+    "test": "./node_modules/mocha/bin/mocha",
     "start-dev": "nodemon --inspect src/index.js",
     "test-dev": "mocha --watch --inspect"
   },
