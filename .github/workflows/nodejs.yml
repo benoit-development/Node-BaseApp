@@ -14,4 +14,4 @@ jobs:
       - uses: actions/checkout@v1
       - name: Echo api folder
         run: ls -R
-        working-directory: ${{ api_folder }}
+        working-directory: ${{ env.api_folder }}
