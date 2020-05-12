@@ -8,7 +8,7 @@ jobs:
     env:
       api-directory: ./api
 
-    name: Build App
+    name: Build API Backend
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
