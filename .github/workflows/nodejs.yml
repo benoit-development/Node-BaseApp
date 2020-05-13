@@ -8,7 +8,7 @@ jobs:
       api-directory: ./api
       app-directory: ./app
 
-    name: Build API Backend
+  name: Build Application
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -27,6 +27,6 @@ jobs:
       - name: Test APP
         run: |
           npm install
-          npm unit
+          npm run unit
           npm run lint
         working-directory: ${{ env.app-directory }}
