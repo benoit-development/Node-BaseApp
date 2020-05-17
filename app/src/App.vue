@@ -2,7 +2,9 @@
   <div class="app">
     <NavBar></NavBar>
     <main role="main">
-      <router-view></router-view>
+      <div class="container">
+        <router-view></router-view>
+      </div>
     </main>
   </div>
 </template>
@@ -18,5 +20,4 @@ export default {
 }
 </script>
 
-<style>
-</style>
+<style></style>
