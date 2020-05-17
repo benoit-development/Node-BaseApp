@@ -8,8 +8,8 @@ jobs:
       api-directory: ./api
       app-directory: ./app
 
-  name: Build Application
-  runs-on: ubuntu-latest
+    name: Build Application
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - name: API folder listing
