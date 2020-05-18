@@ -2,6 +2,7 @@
 
 Base application to begin a new project in Node.js with basic extensions :
 * Express
+* Vue.js
 * Bootstrap
 * MongoDB
 
@@ -17,12 +18,12 @@ Base application to begin a new project in Node.js with basic extensions :
   * [X] EsLint
   * [ ] MongoDB integration
 * Vue.js Frontend
-  * [ ] Vue.js Structure
-  * [ ] Bootstrap
+  * [X] Vue.js Structure
+  * [X] Bootstrap
   * [ ] Font awesome
-  * [ ] Unit Tests
+  * [X] Unit Tests and integration tests
 * Both part
 * [ ] Authentication
 * [ ] Dockerization of the project
 * [ ] CRUD with Mongo DB
-* [ ] CI/CD GitHub
+* [X] CI/CD GitHub
