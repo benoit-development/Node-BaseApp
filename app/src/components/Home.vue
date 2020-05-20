@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    Home
+    <b-icon-arrow-up/> Home
   </div>
 </template>
 
