@@ -1,23 +1,16 @@
 <template>
-  <div id="app">
-    <NavBar></NavBar>
-    <main role="main">
-      <div class="container">
-        <router-view></router-view>
-      </div>
-    </main>
+  <div class="full-width center-content">
+    <h1>Hello World!</h1>
+    <hello-component name="Guybrush" />
   </div>
 </template>
 
 <script>
-import NavBar from './components/NavBar'
+import HelloComponent from './components/HelloComponent.vue'
 
 export default {
-  name: 'App',
   components: {
-    NavBar
+    HelloComponent
   }
 }
 </script>
-
-<style></style>
