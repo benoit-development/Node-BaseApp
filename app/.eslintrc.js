@@ -7,6 +7,10 @@ module.exports = {
     'standard'
   ],
   plugins: [
-    'vue'
-  ]
+    'vue',
+    'jest'
+  ],
+  env: {
+    jest: true
+  }
 }
