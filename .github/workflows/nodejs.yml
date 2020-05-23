@@ -27,6 +27,6 @@ jobs:
       - name: Test APP
         run: |
           npm install
-          npm run unit
+          npm run test:unit
           npm run lint
         working-directory: ${{ env.app-directory }}
