@@ -1,16 +1,15 @@
 <template>
-  <div class="full-width center-content">
-    <h1>Hello World!</h1>
-    <hello-component name="Guybrush" />
+  <div id="app">
+    <main role="main">
+      <div class="container">
+        <router-view />
+      </div>
+    </main>
   </div>
 </template>
 
 <script>
-import HelloComponent from './components/HelloComponent.vue'
 
 export default {
-  components: {
-    HelloComponent
-  }
 }
 </script>
