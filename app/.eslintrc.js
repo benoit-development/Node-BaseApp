@@ -3,7 +3,7 @@ module.exports = {
     parser: 'babel-eslint'
   },
   extends: [
-    'plugin:vue/recommended',
+    'plugin:vue/essential',
     'standard'
   ],
   plugins: [
@@ -12,5 +12,7 @@ module.exports = {
   ],
   env: {
     jest: true
+  },
+  rules: {
   }
 }

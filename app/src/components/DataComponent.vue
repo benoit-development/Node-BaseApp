@@ -4,10 +4,8 @@
 
 <script>
 export default {
-  props: {
-  }
+  props: {}
 }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

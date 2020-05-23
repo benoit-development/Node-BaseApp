@@ -14,7 +14,8 @@ export default new Router({
     {
       path: '/hello',
       name: 'hello',
-      component: HelloComponent
+      component: HelloComponent,
+      props: { name: 'Guybrush' }
     },
     {
       path: '/data',
