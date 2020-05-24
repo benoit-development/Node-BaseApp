@@ -14,14 +14,15 @@ Base application to begin a new project in Node.js with basic extensions :
 * Express Backend
   * [X] Routes
   * [X] Separate APP (UI) and API
-  * [X] Unit tests (Mocha)
+  * [X] Unit tests (Jest)
   * [X] EsLint
   * [ ] MongoDB integration
 * Vue.js Frontend
   * [X] Vue.js Structure
   * [X] Bootstrap
   * [ ] Font awesome
-  * [X] Unit Tests and integration tests
+  * [X] Unit Tests (Jest)
+  * [ ] Integration tests (NightWatch)
 * Both part
 * [ ] Authentication
 * [ ] Dockerization of the project

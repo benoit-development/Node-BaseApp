@@ -14,5 +14,6 @@ module.exports = {
     jest: true
   },
   rules: {
+    'space-before-function-paren': ['error', 'never']
   }
 }

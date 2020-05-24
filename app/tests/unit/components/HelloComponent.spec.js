@@ -1,14 +1,9 @@
 import { shallowMount } from '@vue/test-utils'
-import HelloComponent from '../../../src/components/HelloComponent.vue'
+import HomeComponent from '../../../src/components/HomeComponent.vue'
 
 describe('HelloWorld.vue', () => {
   it('renders props.msg when passed', () => {
-    const msg = 'Guybrush'
-    const wrapper = shallowMount(HelloComponent, {
-      propsData: {
-        name: msg
-      }
-    })
-    expect(wrapper.text()).toContain('Hello Guybrush !')
+    const wrapper = shallowMount(HomeComponent)
+    expect(wrapper.text()).toContain('Node.js')
   })
 })
