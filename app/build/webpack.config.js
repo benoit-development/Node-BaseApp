@@ -56,7 +56,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: resolve('static/img'), to: resolve('dist/static/img'), toType: 'dir' }
+        { from: resolve('static/images'), to: resolve('dist/static/images'), toType: 'dir' }
       ]
     }),
     new MiniCssExtractPlugin({

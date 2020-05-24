@@ -8,14 +8,18 @@
 
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
-            <router-link to="/hello" v-slot="{ href, route, navigate, isActive }">
+            <router-link to="/home" v-slot="{ href, route, navigate, isActive }">
               <li :class="[isActive && 'active', 'nav-item']">
-                <a :href="href" @click="navigate" :class="['nav-link']">Hello</a>
+                <a :href="href" @click="navigate" :class="['nav-link']">
+                  Home
+                </a>
               </li>
             </router-link>
             <router-link to="/data" v-slot="{ href, route, navigate, isActive }">
               <li :class="[isActive && 'active', 'nav-item']">
-                <a :href="href" @click="navigate" :class="['nav-link']">Data</a>
+                <a :href="href" @click="navigate" :class="['nav-link']">
+                  Data
+                </a>
               </li>
             </router-link>
           </b-navbar-nav>
