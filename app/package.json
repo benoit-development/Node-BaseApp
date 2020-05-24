@@ -7,8 +7,8 @@
     "build": "webpack --config build/webpack.config.js",
     "test:unit": "vue-cli-service test:unit",
     "lint": "eslint --ext .js,.vue src",
-    "dev": "webpack-dev-server --config build/webpack.config.js",
-    "lint:fix": "eslint --ext .js,.vue src --fix"
+    "lint:fix": "eslint --ext .js,.vue src --fix",
+    "dev": "webpack-dev-server --config build/webpack.config.js"
   },
   "main": "index.js",
   "dependencies": {

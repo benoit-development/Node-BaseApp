@@ -9,10 +9,9 @@
   },
   "scripts": {
     "start": "node src/index.js",
-    "test": "mocha",
-    "start-dev": "nodemon --inspect src/index.js",
-    "dev": "mocha --watch --inspect",
-    "lint": "eslint ."
+    "dev": "nodemon src/index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint --ext .js src --fix"
   },
   "author": "",
   "license": "ISC",
