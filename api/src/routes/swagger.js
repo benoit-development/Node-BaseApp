@@ -1,9 +1,11 @@
-const router = require('express').Router()
-const swaggerUi = require('swagger-ui-express')
-const fs = require('fs')
-const yaml = require('js-yaml')
+import express from 'express'
+import swaggerUi from 'swagger-ui-express'
+import fs from 'fs'
+import yaml from 'js-yaml'
+import appRoot from 'app-root-path'
 
-const file = fs.readFileSync(global.BASE_PATH + '/static/swagger.yml', 'utf8');
+const router = express.Router()
+const file = fs.readFileSync(appRoot + '/static/swagger.yml', 'utf8');
 const swaggerDocument = yaml.safeLoad(file);
 
 router.use('/', function (req, res, next) {
@@ -13,4 +15,4 @@ router.use('/', function (req, res, next) {
 }, swaggerUi.serve, swaggerUi.setup());
 router.get('/', swaggerUi.setup(swaggerDocument));
 
-module.exports = router;
+export default router;

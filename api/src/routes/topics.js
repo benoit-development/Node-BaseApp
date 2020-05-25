@@ -1,4 +1,5 @@
-const router = require('express').Router();
+import express from 'express';
+const router = express.Router();
 
 router.get('/', (req, res) => {
   console.log("Requesting topics");
@@ -13,7 +14,7 @@ router.get('/', (req, res) => {
       },
       {
         id: 1,
-        title: 'Vue.js',
+        title: 'Vue',
         summary: '',
         image: ''
       },
@@ -27,4 +28,4 @@ router.get('/', (req, res) => {
   });
 });
 
-module.exports = router;
+export default router;
