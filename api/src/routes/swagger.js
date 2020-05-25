@@ -1,13 +1,12 @@
-const router = require('express').Router();
-const swaggerUi = require('swagger-ui-express');
-const fs = require('fs');
-const yaml = require('js-yaml');
-var path = require('path');
+const router = require('express').Router()
+const swaggerUi = require('swagger-ui-express')
+const fs = require('fs')
+const yaml = require('js-yaml')
 
-const file = fs.readFileSync(path.join(__dirname, '../assets/swagger.yml'), 'utf8');
+const file = fs.readFileSync(global.BASE_PATH + '/static/swagger.yml', 'utf8');
 const swaggerDocument = yaml.safeLoad(file);
- 
-router.use('/', function(req, res, next){
+
+router.use('/', function (req, res, next) {
   swaggerDocument.host = req.get('host');
   req.swaggerDoc = swaggerDocument;
   next();

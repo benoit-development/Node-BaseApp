@@ -1,6 +1,7 @@
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
+  console.log("Requesting topics");
   res.send({
     count: 3,
     topics: [
