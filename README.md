@@ -5,6 +5,7 @@ Base application to begin a new project in Node.js with basic extensions :
 * Vue.js
 * Bootstrap
 * MongoDB
+* Webpack
 
 # Todo List
 
