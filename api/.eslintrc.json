@@ -4,9 +4,13 @@
       "browser": false,
       "commonjs": true,
       "es6": true,
-      "mocha": true
+      "mocha": true,
+      "jest/globals": true
   },
-  "extends": "eslint:recommended",
+  "extends": [
+      "eslint:recommended",
+      "plugin:jest/recommended"
+  ],
   "globals": {
       "Atomics": "readonly",
       "SharedArrayBuffer": "readonly"
@@ -17,5 +21,8 @@
   },
   "rules": {
       "indent": ["error", 2]
-  }
+  },
+  "plugins": [
+      "jest"
+  ]
 }
