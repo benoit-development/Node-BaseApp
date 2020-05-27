@@ -11,7 +11,9 @@
     "dev": "cd src && nodemon --exec babel-node server.js",
     "build": "webpack --mode development",
     "start": "npm run build && cd dist && node server.js",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint --ext .js,.vue src",
+    "lint:fix": "eslint --ext .js,.vue src --fix"
   },
   "author": "",
   "license": "ISC",
