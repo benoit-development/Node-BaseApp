@@ -9,7 +9,7 @@ describe('Topics', () => {
         .then(response => {
           expect(response.statusCode).toBe(200)
           expect(response.body.count).toBe(3)
-          expect(response.body.topics.count).toBe(3)
+          expect(response.body.topics.length).toBe(3)
           done()
         })
     })
