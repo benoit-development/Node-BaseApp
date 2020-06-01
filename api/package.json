@@ -8,7 +8,7 @@
     "url": "https://github.com/benoit-development/Node-BaseApp.git"
   },
   "scripts": {
-    "dev": "cd src && nodemon --exec babel-node —-inspect index.js",
+    "dev": "cd src && nodemon --exec babel-node index.js",
     "build": "webpack --mode development",
     "start": "npm run build && cd dist && node index.js",
     "test": "jest --inspect-brk=9229 ",
@@ -19,6 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "app-root-path": "^3.0.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "js-yaml": "^3.14.0",
     "swagger-ui-express": "^4.1.4"

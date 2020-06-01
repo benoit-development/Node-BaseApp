@@ -26,6 +26,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'Home',
   data() {
@@ -34,26 +36,12 @@ export default {
     }
   },
   mounted() {
-    this.topics = [
-      {
-        id: 1,
-        title: 'Node.js',
-        summary: 'node summary',
-        image: 'nodejs.png'
-      },
-      {
-        id: 2,
-        title: 'Vue',
-        summary: 'vue summary',
-        image: 'vue.png'
-      },
-      {
-        id: 3,
-        title: 'Express',
-        summary: 'Express summary',
-        image: 'express.png'
-      }
-    ]
+    axios
+      .get('http://localhost:3000/topics')
+      .then(response => {
+        console.log(response)
+        this.topics = response.data.topics
+      })
   }
 }
 </script>

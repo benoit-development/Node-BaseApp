@@ -1,8 +1,8 @@
-import express from 'express';
-const router = express.Router();
+import express from 'express'
+const router = express.Router()
 
 router.get('/', (req, res) => {
-  console.log("Requesting topics");
+  console.log('Requesting topics')
   res.send({
     count: 3,
     topics: [
@@ -13,19 +13,19 @@ router.get('/', (req, res) => {
         image: ''
       },
       {
-        id: 1,
+        id: 2,
         title: 'Vue',
         summary: '',
         image: ''
       },
       {
-        id: 1,
+        id: 3,
         title: 'Express',
         summary: '',
         image: ''
       }
     ]
-  });
-});
+  })
+})
 
-export default router;
+export default router

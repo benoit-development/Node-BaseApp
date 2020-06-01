@@ -9,12 +9,12 @@ function resolve(dir) {
 
 module.exports = {
   entry: {
-    server: './src/server.js',
+    server: './src/index.js',
   },
   output: {
     path: path.join(__dirname, 'dist'),
     publicPath: '/',
-    filename: '[name].js'
+    filename: 'index.js'
   },
   target: 'node',
   node: {

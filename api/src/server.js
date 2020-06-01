@@ -1,7 +1,12 @@
 import express from 'express'
 import topics from './routes/topics.js'
+import cors from 'cors'
 
 const server = express()
+
+server.use(cors({
+  origin: '*'
+}))
 
 server.use('/topics', topics)
 server.use(function(req, res) {
