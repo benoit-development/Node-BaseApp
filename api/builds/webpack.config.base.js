@@ -1,18 +1,19 @@
+const webpack = require('webpack')
 const path = require('path')
 const nodeExternals = require('webpack-node-externals')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 function resolve(dir) {
-  return path.join(__dirname, './', dir)
+  return path.join(__dirname, '../', dir)
 }
 
 module.exports = {
   entry: {
-    server: './src/index.js',
+    server: resolve('src/index.js'),
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: resolve('dist'),
     publicPath: '/',
     filename: 'index.js'
   },
@@ -36,11 +37,12 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
     new CopyWebpackPlugin({
       patterns: [
         { from: resolve('src/static'), to: resolve('dist/static'), toType: 'dir' }
       ]
-    })
+    }),
+    new CleanWebpackPlugin()
   ]
 }

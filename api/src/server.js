@@ -9,6 +9,7 @@ server.use(cors({
 }))
 
 server.use('/topics', topics)
+server.use(express.static('static'))
 server.use(function(req, res) {
   res.status(404).send({url: req.originalUrl + ' not found'})
 });

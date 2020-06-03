@@ -11,14 +11,10 @@
           <h3>
             <span class="text-muted">{{ topic.summary }}</span>
           </h3>
-          <p class="lead">
-            Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.<br />
-            As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network
-            applications.
-          </p>
+          <p>{{ topic.description }}</p>
         </div>
         <div class="col-md-2">
-          <img alt="500x500" :src="'static/images/logos/' + topic.image" class="img-fluid" />
+          <img alt="logo" :src="topic.image" class="img-fluid" />
         </div>
       </div>
     </div>

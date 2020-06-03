@@ -7,20 +7,17 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 function resolve(dir) {
-  return path.join(__dirname, './', dir)
+  return path.join(__dirname, '../', dir)
 }
 
 module.exports = {
-  devtool: 'source-map',
-  mode: 'development',
-  entry: [
-    './src/app.js'
-  ],
-  devServer: {
-    hot: true,
-    watchOptions: {
-      poll: true
-    }
+  entry: {
+    server: resolve('src/app.js'),
+  },
+  output: {
+    path: resolve('dist'),
+    publicPath: '/',
+    filename: 'app.js'
   },
   module: {
     rules: [

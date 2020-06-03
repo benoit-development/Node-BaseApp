@@ -1,28 +1,26 @@
 {
   "name": "baseapp",
   "version": "1.0.0",
-  "description": "Base Application to start a new project",
+  "description": "Base Application to start a new project - API",
   "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/benoit-development/Node-BaseApp.git"
   },
   "scripts": {
-    "dev": "cd src && nodemon --exec babel-node index.js",
-    "build": "webpack --mode development",
+    "build": "webpack --config builds/webpack.config.prod.js",
     "start": "npm run build && cd dist && node index.js",
+    "dev": "cd src && nodemon --exec babel-node index.js",
     "test": "jest",
     "lint": "eslint --ext .js,.vue src",
     "lint:fix": "eslint --ext .js,.vue src --fix"
   },
-  "author": "",
+  "author": "Benoît Devlopment",
   "license": "ISC",
   "dependencies": {
     "app-root-path": "^3.0.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "js-yaml": "^3.14.0",
-    "swagger-ui-express": "^4.1.4"
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",

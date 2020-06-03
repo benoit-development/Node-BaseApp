@@ -6,6 +6,7 @@ Base application to begin a new project in Node.js with basic extensions :
 * Bootstrap
 * MongoDB
 * Webpack
+* Jest
 
 # Todo List
 

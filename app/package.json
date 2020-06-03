@@ -1,11 +1,12 @@
 {
   "name": "app2",
   "version": "1.0.0",
-  "description": "",
-  "author": "",
+  "description": "Base Application to start a new project - APP",
+  "author": "Benoît Devlopment",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "dev": "webpack-dev-server --config webpack.config.js",
+    "build": "webpack --config builds/webpack.config.prod.js",
+    "start": "npm run build && http-server ./dist -p 8080 -d false",
+    "dev": "webpack-dev-server --config builds/webpack.config.dev.js",
     "test": "vue-cli-service test:unit",
     "lint": "eslint --ext .js,.vue src",
     "lint:fix": "eslint --ext .js,.vue src --fix"
@@ -15,6 +16,7 @@
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.15.0",
+    "http-server": "^0.12.3",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
   },
