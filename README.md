@@ -5,8 +5,7 @@ Base application to begin a new project in Node.js with basic extensions :
 * Vue.js
 * Bootstrap
 * MongoDB
-* Webpack
-* Jest
+* Mocha
 
 # Todo List
 
@@ -16,17 +15,16 @@ Base application to begin a new project in Node.js with basic extensions :
 * Express Backend
   * [X] Routes
   * [X] Separate APP (UI) and API
-  * [X] Unit tests (Jest)
+  * [X] Unit tests (Mocha)
   * [X] EsLint
-  * [ ] MongoDB integration
+  * [X] MongoDB integration
 * Vue.js Frontend
   * [X] Vue.js Structure
   * [X] Bootstrap
   * [ ] Font awesome
-  * [X] Unit Tests (Jest)
-  * [ ] Integration tests (NightWatch)
+  * [ ] Unit Tests (Mocha)
+  * [ ] CRUD with Mongo DB
 * Both part
+* [X] CI/CD GitHub
 * [ ] Authentication
 * [ ] Dockerization of the project
-* [ ] CRUD with Mongo DB
-* [X] CI/CD GitHub
