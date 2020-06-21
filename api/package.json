@@ -2,42 +2,32 @@
   "name": "baseapp",
   "version": "1.0.0",
   "description": "Base Application to start a new project - API",
-  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/benoit-development/Node-BaseApp.git"
   },
+  "main": "index.js",
   "scripts": {
-    "build": "webpack --config builds/webpack.config.prod.js",
-    "start": "npm run build && cd dist && node index.js",
-    "dev": "cd src && nodemon --exec babel-node index.js",
-    "test": "jest",
-    "lint": "eslint --ext .js,.vue src",
-    "lint:fix": "eslint --ext .js,.vue src --fix"
+    "dev": "cd ./src && nodemon index.js",
+    "lint": "eslint --ext .js src",
+    "test": "mocha"
   },
+  "keywords": [],
   "author": "Benoît Devlopment",
   "license": "ISC",
   "dependencies": {
-    "app-root-path": "^3.0.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.19"
   },
+  "type": "module",
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.6",
-    "@babel/node": "^7.8.7",
-    "@babel/preset-env": "^7.9.6",
-    "@types/jest": "^25.2.3",
-    "babel-loader": "^8.1.0",
-    "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^6.0.1",
-    "eslint": "^7.0.0",
-    "eslint-plugin-jest": "^23.13.2",
-    "jest": "^26.0.1",
-    "nodemon": "^2.0.3",
-    "supertest": "^4.0.2",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-node-externals": "^1.7.2"
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^7.2.0",
+    "mocha": "^8.0.1",
+    "mongodb-memory-server": "^6.6.1",
+    "nodemon": "^2.0.4"
   }
 }

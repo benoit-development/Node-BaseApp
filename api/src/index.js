@@ -1,6 +1,20 @@
 import server from './server.js'
+import mongoose from 'mongoose'
 
-const port = 3000;
-server.listen(port, function () {
-  console.log('BaseApp listening on port ' + port)
+import dotenv from 'dotenv'
+
+dotenv.config({ path: '../.env' })
+
+mongoose.connect(process.env.DATABASE_URL, {
+  useUnifiedTopology: true,
+  useNewUrlParser: true
+})
+var db = mongoose.connection
+db.on('error', console.error.bind(console, 'connection error:'))
+db.once('open', function () {
+  console.log('Connected to Mongo DB')
+
+  server.listen(3000, function () {
+    console.log('Base App listening on port 3000')
+  })
 })
