@@ -1,28 +1,17 @@
 {
   "env": {
-      "node": true,
-      "browser": false,
-      "commonjs": true,
-      "es6": true,
-      "mocha": true,
-      "jest/globals": true
-  },
-  "extends": [
-      "eslint:recommended",
-      "plugin:jest/recommended"
-  ],
-  "globals": {
-      "Atomics": "readonly",
-      "SharedArrayBuffer": "readonly"
+    "node": true,
+    "commonjs": true,
+    "browser": false,
+    "mocha": true,
+    "es6": true
   },
   "parserOptions": {
-      "ecmaVersion": 2018,
-      "sourceType": "module"
+    "ecmaVersion": 8,
+    "sourceType": "module"
   },
   "rules": {
       "indent": ["error", 2]
   },
-  "plugins": [
-      "jest"
-  ]
+  "extends": ["eslint:recommended"]
 }

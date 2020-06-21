@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <img src="static/images/homepage.jpg" class="img-fluid" alt="Homepage" />
-    <div v-for="topic in topics" :key="topic.id">
+    <div v-for="topic in topics" :key="topic._id">
       <hr class="featurette-divider" />
       <div class="row featurette">
         <div class="col-md-10">
@@ -33,10 +33,10 @@ export default {
   },
   mounted() {
     axios
-      .get('http://localhost:3000/topics')
+      .get(process.env.API_URL + '/topics')
       .then(response => {
         console.log(response)
-        this.topics = response.data.topics
+        this.topics = response.data
       })
   }
 }

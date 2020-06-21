@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const { VueLoaderPlugin } = require('vue-loader')
+const Dotenv = require('dotenv-webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const path = require('path')
@@ -59,6 +60,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'main.css'
     }),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    new Dotenv({
+      path: resolve('./.env')
+    })
   ]
 }
