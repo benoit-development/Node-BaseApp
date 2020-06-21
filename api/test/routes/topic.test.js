@@ -26,6 +26,7 @@ describe('Topics Routes', () => {
       image: "another image",
     })
     await topic2.save()
+
     const res = await chai.request(server).get('/topics')
 
     res.should.have.status(200)
