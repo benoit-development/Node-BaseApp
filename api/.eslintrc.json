@@ -3,7 +3,7 @@
     "node": true,
     "commonjs": true,
     "browser": false,
-    "mocha": true,
+    "mochagit unsta": true,
     "es6": true
   },
   "parserOptions": {
