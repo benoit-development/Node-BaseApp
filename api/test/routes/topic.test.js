@@ -1,6 +1,5 @@
 import chai from 'chai'
 import chaiHttp from 'chai-http'
-import express from 'express'
 import server from '../../src/server.js'
 import Topic from '../../src/models/topics.js'
 
