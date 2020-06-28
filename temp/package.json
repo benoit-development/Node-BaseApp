@@ -1,0 +1,17 @@
+{
+  "name": "baseapp",
+  "version": "1.0.0",
+  "description": "Base Application to start a new porject - APP",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Benoit Development",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
+}

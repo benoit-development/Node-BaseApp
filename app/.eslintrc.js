@@ -1,19 +1,19 @@
 module.exports = {
-  parserOptions: {
-    parser: 'babel-eslint'
-  },
-  extends: [
-    'plugin:vue/essential',
-    'standard'
-  ],
-  plugins: [
-    'vue',
-    'jest'
-  ],
+  root: true,
   env: {
-    jest: true
+    node: true
+  },
+  'extends': [
+    'plugin:vue/essential',
+    'eslint:recommended'
+  ],
+  parserOptions: {
+    ecmaVersion: 2020
   },
   rules: {
-    'space-before-function-paren': ['error', 'never']
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    "indent": ["error", 2],
+    "max-len": ["error", { "code": 240 }]
   }
 }

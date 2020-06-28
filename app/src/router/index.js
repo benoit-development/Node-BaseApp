@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HomeComponent from '../components/HomeComponent.vue'
-import DataComponent from '../components/DataComponent.vue'
+import HomeComponent from '../views/Home.vue'
+import DataComponent from '../views/Data.vue'
 
 Vue.use(Router)
 
