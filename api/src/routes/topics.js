@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
     const topics = await Topic.find()
     res.json(topics)
   } catch (err) {
+    console.log('Error : ' + err.message)
     res.status(500).json({ message: err.message })
   }
 })
@@ -42,6 +43,7 @@ router.post('/', async (req, res) => {
     const newTopic = await topic.save()
     res.status(201).json(newTopic)
   } catch (err) {
+    console.log('Error : ' + err.message)
     res.status(400).json({ message: err.message })
   }
 })
@@ -56,6 +58,7 @@ router.delete('/:id', getTopic, async (req, res) => {
     await res.topic.remove()
     res.json({ message: 'Topic deleted' })
   } catch(err) {
+    console.log('Error : ' + err.message)
     res.status(500).json({ message: err.message })
   }
 })
@@ -83,6 +86,7 @@ router.patch('/:id', getTopic, async (req, res) => {
     const updatedTopic = await res.topic.save()
     res.json(updatedTopic)
   } catch (err) {
+    console.log('Error : ' + err.message)
     res.status(400).json({ message: err.message })
   }
 
