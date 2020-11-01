@@ -16,14 +16,12 @@ describe('Topics Routes', () => {
       title: "a title",
       summary: "a summary",
       description: "a description",
-      image: "an image",
     })
     await topic1.save();
     const topic2 = new Topic({
       title: "another title",
       summary: "another summary",
       description: "another description",
-      image: "another image",
     })
     await topic2.save()
 
@@ -36,13 +34,11 @@ describe('Topics Routes', () => {
     assert.equal("a title", firstTopic.title)
     assert.equal("a summary", firstTopic.summary)
     assert.equal("a description", firstTopic.description)
-    assert.equal("an image", firstTopic.image)
     
     var secondTopic = res.body[1]
     assert.equal("another title", secondTopic.title)
     assert.equal("another summary", secondTopic.summary)
     assert.equal("another description", secondTopic.description)
-    assert.equal("another image", secondTopic.image)
   })
 
 
@@ -51,7 +47,6 @@ describe('Topics Routes', () => {
       title: "a title",
       summary: "a summary",
       description: "a description",
-      image: "an image",
     })
     await topic.save()
 
@@ -62,7 +57,6 @@ describe('Topics Routes', () => {
     assert.equal("a title", foundTopic.title)
     assert.equal("a summary", foundTopic.summary)
     assert.equal("a description", foundTopic.description)
-    assert.equal("an image", foundTopic.image)
   })
 
 
@@ -71,7 +65,6 @@ describe('Topics Routes', () => {
       title: "a title",
       summary: "a summary",
       description: "a description",
-      image: "an image",
     })
     await topic.save()
     
@@ -88,14 +81,12 @@ describe('Topics Routes', () => {
         title: "a title",
         summary: "a summary",
         description: "a description",
-        image: "an image",
       })
     res.should.have.status(201)
     var topic = res.body
     assert.equal("a title", topic.title)
     assert.equal("a summary", topic.summary)
     assert.equal("a description", topic.description)
-    assert.equal("an image", topic.image)
 
 
     res = await chai.request(server).get('/topics/' + topic._id)
@@ -105,7 +96,6 @@ describe('Topics Routes', () => {
     assert.equal("a title", foundTopic.title)
     assert.equal("a summary", foundTopic.summary)
     assert.equal("a description", foundTopic.description)
-    assert.equal("an image", foundTopic.image)
 
   })
 
@@ -115,7 +105,6 @@ describe('Topics Routes', () => {
       title: "a title",
       summary: "a summary",
       description: "a description",
-      image: "an image",
     })
     await topic.save()
     
@@ -133,7 +122,6 @@ describe('Topics Routes', () => {
       title: "a title",
       summary: "a summary",
       description: "a description",
-      image: "an image",
     })
     await topic.save()
     
@@ -143,7 +131,6 @@ describe('Topics Routes', () => {
         title: "another title",
         summary: "another summary",
         description: "another description",
-        image: "another image",
       })
     res.should.have.status(200)
 
@@ -153,7 +140,6 @@ describe('Topics Routes', () => {
     assert.equal("another title", foundTopic.title)
     assert.equal("another summary", foundTopic.summary)
     assert.equal("another description", foundTopic.description)
-    assert.equal("another image", foundTopic.image)
   })
   
 })
