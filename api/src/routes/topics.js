@@ -58,7 +58,7 @@ router.delete('/:id', authJwtMiddleware, getTopic, async (req, res) => {
   try {
     await res.topic.remove()
     res.json({ message: 'Topic deleted' })
-  } catch(err) {
+  } catch (err) {
     console.log('Error : ' + err.message)
     res.status(500).json({ message: err.message })
   }
@@ -100,14 +100,14 @@ async function getTopic(req, res, next) {
   try {
     const topic = await Topic.findById(req.params.id)
     if (topic == null) {
-      return res.status(404).json({ message: 'Cant find topic'})
+      return res.status(404).json({ message: 'Cant find topic' })
     } else {
       res.topic = topic
       console.log("Topic found")
       console.log(topic)
       next()
     }
-  } catch(err){
+  } catch (err) {
     return res.status(404).json({ message: err.message })
   }
 }

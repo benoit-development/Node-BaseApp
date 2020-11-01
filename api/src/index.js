@@ -5,8 +5,8 @@ import env from './env.js'
 mongoose.connect(env.DATABASE_URL, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
-  auth:{
-    authdb:env.DATABASE_DB
+  auth: {
+    authdb: env.DATABASE_DB
   }
 })
 var db = mongoose.connection
