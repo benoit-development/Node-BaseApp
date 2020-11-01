@@ -1,12 +1,13 @@
 import express from 'express'
 import Topic from '../models/topics.js'
+import authJwtMiddleware from '../middleware/authJwt.js'
 
 const router = express.Router()
 
 
 
 // Get all topics
-router.get('/', async (req, res) => {
+router.get('/', authJwtMiddleware, async (req, res) => {
   console.log('Requesting topics')
   try {
     const topics = await Topic.find()
@@ -20,7 +21,7 @@ router.get('/', async (req, res) => {
 
 
 // Get one topic
-router.get('/:id', getTopic, async (req, res) => {
+router.get('/:id', authJwtMiddleware, getTopic, async (req, res) => {
   console.log('Requesting topic by id')
 
   res.json(res.topic)
@@ -29,7 +30,7 @@ router.get('/:id', getTopic, async (req, res) => {
 
 
 // Create one topic
-router.post('/', async (req, res) => {
+router.post('/', authJwtMiddleware, async (req, res) => {
   console.log('Requesting topic creation')
 
   try {
@@ -51,7 +52,7 @@ router.post('/', async (req, res) => {
 
 
 // Delete one topic
-router.delete('/:id', getTopic, async (req, res) => {
+router.delete('/:id', authJwtMiddleware, getTopic, async (req, res) => {
   console.log('Requesting topic deletion')
 
   try {
@@ -66,7 +67,7 @@ router.delete('/:id', getTopic, async (req, res) => {
 
 
 // Update one topic
-router.patch('/:id', getTopic, async (req, res) => {
+router.patch('/:id', authJwtMiddleware, getTopic, async (req, res) => {
   console.log('Requesting topic update')
 
   if (req.body.title != null) {

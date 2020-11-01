@@ -26,7 +26,6 @@ describe('Auth Routes', () => {
     })
 
     it('should generate token with godd credentials', async () => {
-        process.env.ACCESS_TOKEN_SECRET = "pouet"
         const res = await chai
             .request(server)
             .post('/auth/login')

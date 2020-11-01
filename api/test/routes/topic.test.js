@@ -25,16 +25,19 @@ describe('Topics Routes', () => {
     })
     await topic2.save()
 
-    const res = await chai.request(server).get('/topics')
+    const res = await chai
+      .request(server)
+      .get('/topics')
+      .set("Authorization", "Bearer " + process.env.ACCESS_TOKEN)
 
     res.should.have.status(200)
     assert.equal(2, res.body.length)
-    
+
     var firstTopic = res.body[0]
     assert.equal("a title", firstTopic.title)
     assert.equal("a summary", firstTopic.summary)
     assert.equal("a description", firstTopic.description)
-    
+
     var secondTopic = res.body[1]
     assert.equal("another title", secondTopic.title)
     assert.equal("another summary", secondTopic.summary)
@@ -50,7 +53,10 @@ describe('Topics Routes', () => {
     })
     await topic.save()
 
-    const res = await chai.request(server).get('/topics/' + topic._id)
+    const res = await chai
+      .request(server)
+      .get('/topics/' + topic._id)
+      .set("Authorization", "Bearer " + process.env.ACCESS_TOKEN)
 
     res.should.have.status(200)
     var foundTopic = res.body
@@ -67,15 +73,20 @@ describe('Topics Routes', () => {
       description: "a description",
     })
     await topic.save()
-    
-    const res = await chai.request(server).get('/topics/wrongId')
+
+    const res = await chai
+      .request(server)
+      .get('/topics/wrongId')
+      .set("Authorization", "Bearer " + process.env.ACCESS_TOKEN)
     res.should.have.status(404)
   })
 
 
   it('should save a topic', async () => {
-    let res = await chai.request(server)
+    let res = await chai
+      .request(server)
       .post('/topics')
+      .set("Authorization", "Bearer " + process.env.ACCESS_TOKEN)
       .type('form')
       .send({
         title: "a title",
@@ -89,7 +100,10 @@ describe('Topics Routes', () => {
     assert.equal("a description", topic.description)
 
 
-    res = await chai.request(server).get('/topics/' + topic._id)
+    res = await chai
+      .request(server)
+      .get('/topics/' + topic._id)
+      .set("Authorization", "Bearer " + process.env.ACCESS_TOKEN)
 
     res.should.have.status(200)
     var foundTopic = res.body
@@ -107,14 +121,21 @@ describe('Topics Routes', () => {
       description: "a description",
     })
     await topic.save()
-    
-    let res = await chai.request(server).delete('/topics/' + topic._id)
+
+    let res = await chai
+      .request(server)
+      .delete('/topics/' + topic._id)
+      .set("Authorization", "Bearer " + process.env.ACCESS_TOKEN)
     res.should.have.status(200)
 
-    res = await chai.request(server).get('/topics')
+    res = await chai
+      .request(server)
+      .get('/topics')
+      .set("Authorization", "Bearer " + process.env.ACCESS_TOKEN)
     res.should.have.status(200)
     assert.equal(0, res.body.length)
   })
+
 
 
   it('should update a topic with its id', async () => {
@@ -124,9 +145,11 @@ describe('Topics Routes', () => {
       description: "a description",
     })
     await topic.save()
-    
-    let res = await chai.request(server)
+
+    let res = await chai
+      .request(server)
       .patch('/topics/' + topic._id)
+      .set("Authorization", "Bearer " + process.env.ACCESS_TOKEN)
       .send({
         title: "another title",
         summary: "another summary",
@@ -134,12 +157,21 @@ describe('Topics Routes', () => {
       })
     res.should.have.status(200)
 
-    res = await chai.request(server).get('/topics/' + topic._id)
+    res = await chai
+      .request(server)
+      .get('/topics/' + topic._id)
+      .set("Authorization", "Bearer " + process.env.ACCESS_TOKEN)
     res.should.have.status(200)
     var foundTopic = res.body
     assert.equal("another title", foundTopic.title)
     assert.equal("another summary", foundTopic.summary)
     assert.equal("another description", foundTopic.description)
   })
-  
+
+
+
+  it('should not be authorized without token', async () => {
+
+  })
+
 })

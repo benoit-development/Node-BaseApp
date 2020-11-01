@@ -8,14 +8,11 @@ const users = [
   {
       username: 'john',
       password: '123',
-      role: 'admin'
   }, {
       username: 'anna',
       password: '456',
-      role: 'member'
   }
 ];
-console.log(env.ACCESS_TOKEN_SECRET)
 
 router.post('/login', (req, res) => {
     // Read username and password from request body
@@ -28,7 +25,6 @@ router.post('/login', (req, res) => {
         // Generate an access token
         const generatedToken = jwt.sign({ 
             username: user.username,
-            role: user.role,
             expiresIn: '1800s'
         }, env.ACCESS_TOKEN_SECRET);
 
