@@ -1,6 +1,6 @@
 import express from 'express'
 import jwt from 'jsonwebtoken'
-import env from '../env.js'
+import env from './../env.js'
 
 const router = express.Router()
 
@@ -15,6 +15,7 @@ const users = [
       role: 'member'
   }
 ];
+console.log(env.ACCESS_TOKEN_SECRET)
 
 router.post('/login', (req, res) => {
     // Read username and password from request body
@@ -25,17 +26,17 @@ router.post('/login', (req, res) => {
 
     if (user) {
         // Generate an access token
-        const accessToken = jwt.sign({ 
+        const generatedToken = jwt.sign({ 
             username: user.username,
             role: user.role,
             expiresIn: '1800s'
         }, env.ACCESS_TOKEN_SECRET);
 
         res.json({
-            accessToken
+            access_token: generatedToken
         });
     } else {
-        res.send('Username or password incorrect');
+        res.status(401).send('Username or password incorrect');
     }
 });
 
