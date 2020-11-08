@@ -9,6 +9,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "cd ./src && nodemon index.js",
+    "start": "cd ./src && node index.js",
     "lint": "eslint --ext .js src",
     "test": "mocha"
   },

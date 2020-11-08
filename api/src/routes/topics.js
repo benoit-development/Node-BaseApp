@@ -38,7 +38,6 @@ router.post('/', authJwtMiddleware, async (req, res) => {
       title: req.body.title,
       summary: req.body.summary,
       description: req.body.description,
-      image: req.body.image,
     })
 
     const newTopic = await topic.save()
@@ -78,9 +77,6 @@ router.patch('/:id', authJwtMiddleware, getTopic, async (req, res) => {
   }
   if (req.body.description != null) {
     res.topic.description = req.body.description
-  }
-  if (req.body.image != null) {
-    res.topic.image = req.body.image
   }
 
   try {

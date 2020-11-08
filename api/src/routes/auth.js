@@ -28,10 +28,12 @@ router.post('/login', (req, res) => {
             expiresIn: '1800s'
         }, env.ACCESS_TOKEN_SECRET);
 
+        console.log('Login succeeded')
         res.json({
             access_token: generatedToken
         });
     } else {
+        console.log('Login failed')
         res.status(401).send('Username or password incorrect');
     }
 });
