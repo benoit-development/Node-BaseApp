@@ -6,7 +6,7 @@ import auth from './routes/auth.js'
 
 const server = express()
 server.use(cors({
-  origin: '*'
+    origin: '*'
 }))
 
 server.use(bodyParser.urlencoded({ extended: true }))
@@ -16,7 +16,7 @@ server.use('/topics', topics)
 server.use('/auth', auth)
 server.use(express.static('static'))
 server.use(function (req, res) {
-  res.status(404).send({ url: req.originalUrl + ' not found' })
+    res.status(404).send({ url: req.originalUrl + ' not found' })
 });
 
 export default server
