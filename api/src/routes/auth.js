@@ -5,13 +5,13 @@ import env from './../env.js'
 const router = express.Router()
 
 const users = [
-  {
-      username: 'john',
-      password: '123',
-  }, {
-      username: 'anna',
-      password: '456',
-  }
+    {
+        username: 'john',
+        password: '123',
+    }, {
+        username: 'anna',
+        password: '456',
+    }
 ];
 
 router.post('/login', (req, res) => {
@@ -23,10 +23,15 @@ router.post('/login', (req, res) => {
 
     if (user) {
         // Generate an access token
-        const generatedToken = jwt.sign({ 
-            username: user.username,
-            expiresIn: '1800s'
-        }, env.ACCESS_TOKEN_SECRET);
+        const generatedToken = jwt.sign(
+            {
+                username: user.username
+            },
+            env.ACCESS_TOKEN_SECRET,
+            {
+                expiresIn: '900s'
+            }
+        );
 
         console.log('Login succeeded')
         res.json({
