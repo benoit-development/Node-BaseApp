@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-export default mongoose.model('Topic', new mongoose.Schema({
+export default mongoose.model('topics', new mongoose.Schema({
     title: {
         type: String,
         required: true

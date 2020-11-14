@@ -1,5 +1,5 @@
 import express from 'express'
-import Topic from '../models/topics.js'
+import Topic from '../models/topic.js'
 import authJwtMiddleware from '../middleware/authJwt.js'
 
 const router = express.Router()
@@ -99,12 +99,11 @@ async function getTopic(req, res, next) {
             return res.status(404).json({ message: 'Cant find topic' })
         } else {
             res.topic = topic
-            console.log("Topic found")
-            console.log(topic)
+            console.log("Topic found : " + topic.title)
             next()
         }
     } catch (err) {
-        return res.status(404).json({ message: err.message })
+        return res.status(500).json({ message: err.message })
     }
 }
 

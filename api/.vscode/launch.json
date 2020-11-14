@@ -4,14 +4,27 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        {            
+            "type": "node",            
+            "request": "launch",            
+            "name": "Mocha all tests",            
+            "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",            
+            "args": [                
+               "--opts",                
+               "${workspaceFolder}/mocha.opts",                  
+               "${workspaceRoot}/test/**/*.test.js"            
+            ],            
+            "cwd": "${workspaceRoot}",   
+            "internalConsoleOptions": "openOnSessionStart"        
+         },
         {
             "name": "Debug API",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}/api/src/index.js",
+            "program": "${workspaceRoot}/src/index.js",
             "stopOnEntry": false,
             "args": [],
-            "cwd": "${workspaceRoot}/api/src",
+            "cwd": "${workspaceRoot}/src",
             "preLaunchTask": null,
             "runtimeExecutable": null,
             "runtimeArgs": [
@@ -22,22 +35,6 @@
             },
             "console": "internalConsole",
             "sourceMaps": false
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Debut Tests API",
-            "program": "${workspaceFolder}/api/node_modules/mocha/bin/_mocha",
-            "args": [
-                "${workspaceFolder}/api/test/**/*.test.js",
-                "--file",
-                "./setup.js"
-            ],
-            "cwd": "${workspaceRoot}/api/test",
-            "internalConsoleOptions": "openOnSessionStart",
-            "skipFiles": [
-                "<node_internals>/**"
-            ]
-        },
+        }
     ]
 }
