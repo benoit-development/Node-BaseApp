@@ -2,8 +2,6 @@ import chai from 'chai'
 import chaiHttp from 'chai-http'
 import server from '../../src/server.js'
 
-const { assert } = chai
-
 chai.use(chaiHttp)
 chai.should()
 
