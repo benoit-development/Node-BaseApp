@@ -32,7 +32,7 @@ beforeEach(async () => {
 });
 
 afterEach(async () => {
-    await mongoose.disconnect()
     await AppUser.findOneAndDelete(user.id)
+    await mongoose.disconnect()
     await mongoServer.stop()
 });
