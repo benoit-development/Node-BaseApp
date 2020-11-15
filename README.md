@@ -18,7 +18,9 @@ Base application to begin a new project in Node.js with basic extensions :
   * [X] Unit tests (Mocha)
   * [X] EsLint
   * [X] MongoDB integration
-  * [ ] User Authentication with DB
+  * [X] User Authentication with DB
+  * [X] Dockerization
+  * [ ] Typescript
 * Vue.js Frontend
   * [X] Vue.js Structure
   * [X] Bootstrap
@@ -26,8 +28,7 @@ Base application to begin a new project in Node.js with basic extensions :
   * [ ] Font awesome
   * [ ] Unit Tests (Mocha)
   * [ ] CRUD with Mongo DB
+  * [ ] Dockerization
+  * [ ] Typescript
 * Both part
-* [X] CI/CD GitHub
-* [ ] Typescript
-* [ ] Authentication
-* [ ] Dockerization of the project
+  * [X] CI/CD GitHub
